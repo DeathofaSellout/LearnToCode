@@ -1,0 +1,11 @@
+<%= render "shared/nav" %>
+<div class="profile">
+  <h4>Hey <%= @user.username %> !</h4>
+  <h6>Username: <%= @user.username %></h6>
+  <a class="waves-effect waves-light btn modal-trigger dude" href="#modal3">Edit Profile</a>
+</div>
+<div class="profiletwo">
+  <%= link_to "Delete Profile", destroy_path(@user), data: {:confirm => "Are you sure you want to delete your profile?"}, :method => :delete %>
+</div>
+<%= render "shared/footer" %>
+<%= render "shared/edit_profile" %>

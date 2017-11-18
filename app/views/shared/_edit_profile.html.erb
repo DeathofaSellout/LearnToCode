@@ -1,0 +1,22 @@
+<div id="modal3" class="modal sick">
+  <div class="modal-content">
+    <%= form_for @user, :class=> "col s12" do |f| %>
+   <div class="row">
+     <div class="input-field col s12">
+       <%= f.text_field :password %>
+       <%= f.label :password, :class=> "active" %>
+     </div>
+   </div>
+   <div class="row">
+     <div class="input-field col s12">
+      <%= f.text_field :username %>
+      <%= f.label :username, :class=> "active" %>
+    </div>
+  </div>
+    <div class="modal-footer">
+      <a class="modal-action modal-close waves-effect waves-red btn-flat">Cancel</a>
+      <%= f.submit "submit", :class=> "btn-flat" %>
+    </div>
+    <% end %>
+  </div>
+</div>
