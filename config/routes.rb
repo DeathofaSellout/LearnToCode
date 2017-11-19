@@ -3,7 +3,8 @@ Rails.application.routes.draw do
 
   resources :post_comments
   resources :posts
-
+  resources :tasks
+  
   root to: 'users#index'
 
   post   '/users',     to: 'users#create',  as: 'users' #adds _path to as

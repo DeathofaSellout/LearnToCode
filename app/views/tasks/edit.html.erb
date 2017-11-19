@@ -1,0 +1,10 @@
+<%= render "shared/nav" %>
+<div class="center">
+<h1 class="task-header">
+  Editing <%= @task.task %>
+</h1>
+</div>
+<%= link_to 'Log out', destroy_user_session_path, method: :delete, class: ['action-button', 'log-out-button'] %>﻿
+
+<%= render 'form', task: @task, readonly: false %>
+<%= render "shared/footer" %>

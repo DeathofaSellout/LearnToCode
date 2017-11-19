@@ -1,0 +1,6 @@
+<%= render "shared/nav" %>
+<h1 class="task-header">
+  <%= @task.task %>
+</h1>
+<%= render 'form', task: @task, readonly: true %>
+<%= render "shared/footer" %>

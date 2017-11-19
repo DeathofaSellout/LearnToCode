@@ -18,6 +18,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    # @post.id = current_user.id
     @post.user = current_user
     @post.user_id = current_user.id
     respond_to do |format|
@@ -55,6 +56,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:main, :user_id) # deleted :comment from permit
+      params.require(:post).permit(:main,:comment, :user_id) # deleted :comment from permit
     end
 end
