@@ -2,7 +2,8 @@
   <div class="nav-wrapper">
     <a href="/posts" class="logo left">LearnToCode</a>
     <ul id="nav-mobile" class="right">
-      <li><%= link_to "Profile Page", user_path(current_user[:id]), class: "btn waves-effect waves-light" %></li>
+      <li><%= link_to "Code", href="/pages/start", class: "btn waves-effect waves-light" %></li>
+      <li><%= link_to "Profile", user_path(current_user[:id]), class: "btn waves-effect waves-light" %></li>
       <li><%= link_to "Forum", posts_path, class: "btn waves-effect waves-light" %></li>
       <li><%= link_to "Tasks", tasks_path, class: "btn waves-effect waves-light" %></li>
       <li><%= link_to "Log Out", logout_path, class: "btn waves-effect waves-light" %></li>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :post_comments
   resources :posts
   resources :tasks
-  
+
   root to: 'users#index'
 
   post   '/users',     to: 'users#create',  as: 'users' #adds _path to as
@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   delete '/users/:id', to: 'users#destroy', as: 'destroy'
   patch  '/users/:id', to: 'users#update'
 
-  get '/login',  to: 'sessions#new'
-  get '/logout', to: 'sessions#destroy'
+  get    '/login',     to: 'sessions#new'
+  get    '/logout',    to: 'sessions#destroy'
 
-  post '/sessions', to: 'sessions#create'
+  post   '/sessions',  to: 'sessions#create'
+
+  get "/pages/:page" => "pages#show"
 end

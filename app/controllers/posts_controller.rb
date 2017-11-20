@@ -18,7 +18,6 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
-    # @post.id = current_user.id
     @post.user = current_user
     @post.user_id = current_user.id
     respond_to do |format|
