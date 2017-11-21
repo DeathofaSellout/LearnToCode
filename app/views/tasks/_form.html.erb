@@ -44,7 +44,16 @@
           <%= form.label :completed, class: 'form-label' %>
         </div>
         <div class="form-input-container">
-          <%= form.check_box :completed, id: :task_completed, class: 'form-input', disabled: readonly %>
+          <!-- <div>
+          <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter">
+          <label for="subscribeNews">Subscribe to newsletter?</label>
+        </div>
+        <div>
+          <button type="submit">Subscribe</button>
+        </div> -->
+          <input name="task[completed]"  value="0" >
+          <label for="task_completed">TYPE IN 1 IF COMPLETED</label>
+          <input id="task_completed" class="form-input" type="checkbox" value="1" name="task[completed]">
         </div>
       </div>
       <% unless readonly %>

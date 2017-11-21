@@ -55,6 +55,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:main,:comment, :user_id) # deleted :comment from permit
+      params.require(:post).permit(:main, :comment, :user_id)
     end
 end

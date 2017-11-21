@@ -2,11 +2,11 @@
 <p id="notice"><%= notice %></p>
 
 <div class="post_header">
-  <h4>Ask Questions, Answer Questions. Be a Part of the Community.</h4>
+  <h4>Ask A Question, Delete It After It's Solved</h4>
 </div>
 
-<div class="profiletwo">
-  <%= link_to 'Add New Post', new_post_path %>
+<div class="profilefour">
+  <%= link_to 'Question', new_post_path, class: "btn waves-effect waves-light" %>
 </div>
 
 <div class="posts">
@@ -14,26 +14,26 @@
   <% @posts.each do |post| %>
     <div class="post">
       <h4><%= post.main %></h4>
-      Post by: <%= post.user.username %>
+      Question by: <%= post.user.username %>
     </div>
     <div class="post_buttons">
       <%= link_to 'Edit', edit_post_path(post) %>
       <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
+    <%= render :partial => "post_comments/comment_form", :locals => {:post_id => post.id }%>
+    <a class="waves-effect waves-light btn modal-trigger dude" href="#modal_add_comment_<%= post.id %>">Comment</a>
     <hr />
       <% post.post_comments.each do |comment|%>
         <div class="comment">
-           <h6>Comment: <%= comment.comment %></h6>
-           Comment by: <%= comment.user.username %>
+           <h6>Answer: <%= comment.comment %></h6>
+           Answer by: <%= comment.user.username %>
         </div>
         <div class="post_buttons">
-          <%= link_to 'Edit', edit_post_comment_path(comment) %>
+          <%= render "shared/edit_post_comment" %>
+          <a class="waves-effect waves-light btn modal-trigger dude" href="#modal4">Edit Comment</a>
           <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
       <% end %>
-      <%= render :partial => "post_comments/comment_form", :locals => {:post_id => post.id }%>
-      <a class="waves-effect waves-light btn modal-trigger dude" href="#modal_add_comment_<%= post.id %>">Comment</a>
     <hr />
   <% end %>
 </div>
-<%= render "shared/footer" %>
