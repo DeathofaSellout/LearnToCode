@@ -30,10 +30,11 @@
         </div>
         <div class="post_buttons">
           <%= render "shared/edit_post_comment" %>
-          <a class="waves-effect waves-light btn modal-trigger dude" href="#modal4">Edit Comment</a>
+          <!-- <a class="waves-effect waves-light btn modal-trigger dude" href="#modal4">Edit Comment</a> -->
           <%= link_to 'Destroy', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
       <% end %>
     <hr />
   <% end %>
 </div>
+<%= render "shared/footer" %>
