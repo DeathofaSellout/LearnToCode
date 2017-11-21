@@ -20,5 +20,11 @@ $(document).ready(function(){
   console.log("$modal", $('.modal'))
   //$(".button-collapse").sideNav()
 
+  $(".waves-effect waves-light btn modal-trigger").on("click", function(e) {
+      e.preventDefault();
+      $('.waves-effect waves-light btn modal-trigger"').modal('open');
+      $('.waves-effect waves-light btn modal-trigger"').modal('close');
+
+  });
   $("select").material_select();
 })
