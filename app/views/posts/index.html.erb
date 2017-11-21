@@ -21,7 +21,7 @@
       <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
     </div>
     <%= render :partial => "post_comments/comment_form", :locals => {:post_id => post.id }%>
-    <a class="waves-effect waves-light btn modal-trigger dude" href="#modal_add_comment_<%= post.id %>">Comment</a>
+    <a class="waves-effect waves-light btn modal-trigger dude" href="#modal_add_comment_<%= post.id %>">Answer</a>
     <hr />
       <% post.post_comments.each do |comment|%>
         <div class="comment">
