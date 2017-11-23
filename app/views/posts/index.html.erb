@@ -22,7 +22,6 @@
     </div>
     <%= render :partial => "post_comments/comment_form", :locals => {:post_id => post.id }%>
     <a class="waves-effect waves-light btn modal-trigger dude" href="#modal_add_comment_<%= post.id %>">Answer</a>
-    <hr />
       <% post.post_comments.each do |comment|%>
         <div class="comment">
            <h6>Answer: <%= comment.comment %></h6>
