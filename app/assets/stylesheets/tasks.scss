@@ -82,53 +82,31 @@
 .task-button:hover {
   color: #000;
 }
-
-/* Form */
-.center {
-  background-color: white;
-  margin: 40px;
-  padding: 20px;
-  border-radius: 20px;
-}
 .form-container {
   margin: 100px auto;
   max-width: 600px;
   text-align: center;
   background-color: white;
 }
-
-.form-sessions {
-  max-width: 400px;
-}
-
 .form-field {
   display: grid;
   font-size: 1.5em;
   grid-template-columns: [col] 30% [col] 70%;
   margin-top: 20px;
 }
-
 .form-label-container {
   align-self: center;
   grid-column: col 1;
   margin-right: 15px;
   text-align: left;
 }
-
 .form-input-container {
   align-self: center;
   grid-column: col 2;
 }
-
-.form-checkbox {
-  margin-right: 10px;
-  text-align: right;
-}
-
 .form-label {
   font-size: inherit;
 }
-
 .form-input {
   background-color: #fff;
   border: thin solid #76ac26;
@@ -138,81 +116,21 @@
   padding: 15px;
   width: 100%;
 }
-
 .form-input-container em {
   font-size: 0.6em;
 }
-
 .form-buttons {
   margin-top: 40px;
 }
-
 .form-links-sessions {
   margin-top: 30px;
 }
-
 .form-links-sessions a {
   color: #76ac26;
   grid-column: col 1;
   text-decoration: none;
 }
-
 .form-links-sessions a:hover {
   color: inherit;
   text-decoration: underline;
-}
-
-/* Generic buttons */
-
-.back-button {
-  float: right;
-  position: absolute;
-  top: 25px;
-  right: 125px;
-}
-
-.action-button {
-  background-color: #76ac26;
-  border: thin solid transparent;
-  color: #fff;
-  font-size: inherit;
-  text-decoration: none;
-  padding: 10px 25px;
-}
-
-.action-button:hover {
-  background-color: #fff;
-  border-color: #76ac26;
-  color: #76ac26;
-}
-
-.user-session-buttons {
-  display: grid;
-  float: right;
-  font-size: 1em;
-  grid-template-columns: [col] 60% [col] 60%;
-  grid-gap: 10px;
-  position: absolute;
-  text-align: center;
-  top: 25px;
-  right: 65px;
-}
-
-.sign-up-button {
-  grid-column: col 1;
-  padding: 10px;
-}
-
-.log-in-button {
-  grid-column: col 2;
-  padding: 10px;
-}
-
-.log-out-button {
-  cursor: pointer;
-  float: right;
-  padding: 10px 15px;
-  position: absolute;
-  top: 25px;
-  right: 25px;
 }
